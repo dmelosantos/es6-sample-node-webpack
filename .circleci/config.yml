@@ -9,6 +9,11 @@ jobs:
 
     working_directory: ~/repo
 
+    branches:
+      only:
+        - develop
+        - master
+
     steps:
       - checkout
 
@@ -34,8 +39,4 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build:
-      - deploy-stage:
-          filters:
-            branches:
-              only: master
+      - build
