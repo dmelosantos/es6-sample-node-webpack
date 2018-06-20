@@ -5,7 +5,7 @@ const library = require('es6-sample-library');
 
 // Load application styles
 import 'styles/index.scss';
-import testingJestCoverage from 'src/testModule';
+import testingJestCoverage from 'testModule';
 
 console.log(testingJestCoverage(20,30));
 
