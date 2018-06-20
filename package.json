@@ -39,11 +39,19 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/src/**/*.{js}",
+      "src/**.{js}",
       "!**/node_modules/**",
       "!**/dist/**",
       "!**/vendor/**"
     ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 75,
+        "lines": 75,
+        "statements": 75
+      }
+    },
     "coverageDirectory": "reports/coverage",
     "collectCoverage": true,
     "verbose": true
