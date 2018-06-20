@@ -34,11 +34,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}-{{checksum "package-lock.json"}}
 
-    # todo need to cleanup first
-    #   run:
-    #     name: run eslint
-    #     command: npm run lint
-
       - run:
           name: run tests incl coverage
           command: npm run test

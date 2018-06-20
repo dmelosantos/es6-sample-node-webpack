@@ -6,8 +6,13 @@
   "license": "MIT",
   "homepage": "https://github.com/cvgellhorn/webpack-boilerplate",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
     "build": "webpack -p --progress --mode production --config webpack.config.build.js",
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
+    "lint": "eslint ./src/**.js",
+    "version": "npm run build",
+    "postversion": "git add --all && git commit -m\"build and version $npm_package_version\" -m\"[skip ci]\" && git push",
+    "pretag": "git fetch --tags",
+    "tag": "git tag v$npm_package_version && git push origin --tags"
     "test": "jest"
   },
   "repository": {
