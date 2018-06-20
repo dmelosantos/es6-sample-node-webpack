@@ -34,10 +34,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}-{{checksum "package-lock.json"}}
 
-        - run:
-          name: linting
-          command: npm run lint
-
       - run:
           name: run tests incl coverage
           command: npm run test
