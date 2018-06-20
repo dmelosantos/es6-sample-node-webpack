@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: run tests incl coverage
-          command: npm run coverage
+          command: npm run test
 
   release:
     docker:
